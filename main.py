@@ -11,17 +11,17 @@ def func2(radius):
     return radius*radius*math.pi
 
 
-def func3(input):
+def func3(input_number):
     """" 3. Develop a function that returns the greatest value of a list of positive numbers."""
-    input.sort(reverse=True)
-    return input[0]
+    input_number.sort(reverse=True)
+    return input_number[0]
 
 
-def func4(input):
+def func4(input_number):
     """" 4. Develop a function that reverses a list of elements (try to develop an imperative and a recursive
     solution). """
-    input.reverse()
-    return input
+    input_number.reverse()
+    return input_number
 
 
 def func5(number, sortedlist):
@@ -32,20 +32,20 @@ def func5(number, sortedlist):
     return sortedlist
 
 
-def func6(unsortedlist):
+def func6(unsorted_list):
     """" 6. Develop a function insertion_sort that takes an unordered list of numbers and returns an ordered list
     taking advantage of the previous function. """
     result = []
-    for x in unsortedlist:
+    for x in unsorted_list:
         result = func5(x, result)
     return result
 
 
-def func7_imperativ(input):
+def func7_imperative(input_number):
     """" 7. Develop an imperative and recursive function that compute the sum of a List of integers without using any
     predefined functions. """
     result = 0
-    for x in input:
+    for x in input_number:
         result += x
     return result
 
@@ -64,4 +64,4 @@ print("result: "+str(func5(6, [1, 2, 3, 10, 15]))+" expected: [1, 2, 3, 6, 10, 1
 print("test function6")
 print("result: "+str(func6([2, 1, 30, 10, 15]))+" expected: [1, 2, 10, 15, 30]")
 print("test function7_imperative")
-print("result: "+str(func7_imperativ([2, 1, 30, 10, 15]))+" expected: 58")
+print("result: "+str(func7_imperative([2, 1, 30, 10, 15]))+" expected: 58")
