@@ -41,13 +41,21 @@ def func6(unsorted_list):
     return result
 
 
-def func7_imperative(input_number):
+def func7_imperative(input_numbers):
     """" 7. Develop an imperative and recursive function that compute the sum of a List of integers without using any
     predefined functions. """
     result = 0
-    for x in input_number:
+    for x in input_numbers:
         result += x
     return result
+
+
+def func7_recursive(input_numbers, result, index):
+    """" 7. Develop an imperative and recursive function that compute the sum of a List of integers without using any
+    predefined functions. """
+    if len(input_numbers) == index:
+        return result
+    return func7_recursive(input_numbers, result + input_numbers[index], index+1)
 
 
 print("test function1")
@@ -65,3 +73,5 @@ print("test function6")
 print("result: "+str(func6([2, 1, 30, 10, 15]))+" expected: [1, 2, 10, 15, 30]")
 print("test function7_imperative")
 print("result: "+str(func7_imperative([2, 1, 30, 10, 15]))+" expected: 58")
+print("test function7_recursive")
+print("result: "+str(func7_recursive([2, 1, 30, 10, 15], 0, 0))+" expected: 58")
